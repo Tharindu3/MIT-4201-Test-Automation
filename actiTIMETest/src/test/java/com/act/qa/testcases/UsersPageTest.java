@@ -38,10 +38,7 @@ public class UsersPageTest extends TestBase {
 		
 	@Test(priority = 1)
 	public void validateUsersPageTitleTest() {
-		
-//		driver.get("https://demo.actitime.com/user/submit_tt.do");
-//		System.out.println("Page title is : " + driver.getTitle());		 
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICIT_WAIT));
+
 		String usersPageTitle = usersPage.validateUsersPageTitle();		
 		Assert.assertEquals(usersPageTitle, "actiTIME - User List", "Users Page Title not matched");
 	}

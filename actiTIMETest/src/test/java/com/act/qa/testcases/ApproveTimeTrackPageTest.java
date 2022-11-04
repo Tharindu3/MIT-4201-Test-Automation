@@ -10,16 +10,12 @@ import com.act.qa.base.TestBase;
 import com.act.qa.pages.ApproveTimeTrackPage;
 import com.act.qa.pages.HomePage;
 import com.act.qa.pages.LoginPage;
-//import com.act.qa.pages.ReportsPage;
-//import com.act.qa.pages.UsersPage;
 import com.act.qa.util.TestUtil;
 
 public class ApproveTimeTrackPageTest extends TestBase{
 
 	LoginPage loginPage;
 	HomePage homePage;
-//	ReportsPage reportsPage;
-//	UsersPage usersPage;
 	ApproveTimeTrackPage approveTimeTrackPage;
 	
 	String fileName = "searchEmp";
@@ -54,13 +50,6 @@ public class ApproveTimeTrackPageTest extends TestBase{
 		return data;
 	}
 	
-	
-//	@Test(priority = 3, dataProvider = "getSearchEmpTestData")
-//	public void validateFindSearchedEmpTest(String FName,String LName) {	
-//		if(approveTimeTrackPage.verifyApproveTimeTrackPageHeading()) {		
-//			approveTimeTrackPage = approveTimeTrackPage.enterSearchEmp(FName,LName);
-//		}		
-//	}
 	
 	@Test(priority = 3, dataProvider = "getSearchEmpTestData")
 	public void approveEmpTimeTracksTest(String FName,String LName) {

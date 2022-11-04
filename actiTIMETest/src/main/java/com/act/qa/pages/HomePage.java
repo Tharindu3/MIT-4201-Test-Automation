@@ -8,19 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.act.qa.base.TestBase;
 
 public class HomePage extends TestBase{
-
-//	@FindBy(xpath = "//a[contains(text(),'John Doe')]")
-//	WebElement userNameLabel;
-	
-//	@FindBy(xpath = "//a[@class = 'userProfileLink username ']")
-//	WebElement userNameLabel;
 	
 	@FindBy(xpath = "//td[@class='profileCell preventPanelsHiding']//a[@class='userProfileLink username ' and contains(text(),'John')]")
 	@CacheLookup
 	WebElement userNameLabel;
-	
-//	@FindBy(xpath = "//div[contains(text(),'Tasks')]")
-//	WebElement taskLink;	
 		
 	
 	@FindBy(xpath = "//div[contains(text(),'Reports') and @class='label']")

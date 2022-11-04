@@ -8,24 +8,6 @@ import com.act.qa.base.TestBase;
 
 public class LoginPage extends TestBase {
 
-	//Page Factory - OR
-	
-//	*****************-1-*******************
-	
-//	@FindBy(name="username")
-//	WebElement username;
-//	
-//	@FindBy(name="pwd")
-//	WebElement password;
-//		
-//	@FindBy(id="loginButton")
-//	WebElement loginButton;
-//	
-//	@FindBy(xpath="//a[@target='_blank']/@href")
-//	WebElement webLink;
-	
-	
-	//*****************-2-*******************
 	
 	@FindBy(xpath = "//input[@name='username']")	
 	WebElement userName;
@@ -34,14 +16,7 @@ public class LoginPage extends TestBase {
 	WebElement passWord;
 	
 	@FindBy(xpath = "//a[@id='loginButton']")
-	WebElement loginButton;
-	
-//	@FindBy(xpath = "//input[@name='remember']")
-//	WebElement keepmeLoggedinCheckBox;
-//	
-//	@FindBy(xpath = "//a[@id='toPasswordRecoveryPageLink']")
-//	WebElement forgotYourPasswordLink;
-	
+	WebElement loginButton;	
 	
 	@FindBy(xpath = "//div[@class='atLogoImg']")
 	WebElement actiTimeLogo;

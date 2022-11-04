@@ -14,7 +14,6 @@ public class ReportsPage extends TestBase {
 	@FindBy(xpath= "//div[@class='type-title' and contains(text(),'Leave hours by Users')]")
 	WebElement reportCard;
 	
-//	@FindBy(xpath= "//div[@class='reportName' and contains(text(),'Chart: Past Month\'s Leaves\')]")
 	@FindBy(xpath= "//div[@class='lightBoxTitle' and contains(text(),'Create Chart:')]")	
 	WebElement chartModal;
 	
@@ -33,9 +32,6 @@ public class ReportsPage extends TestBase {
 		return reportsPageHeading.isDisplayed();			
 	}
 	
-//	public void clickOnReportsLink() {
-//		reportCard.click();					
-//	}
 	
 	public Boolean visibleChartModal() {
 		reportCard.click();	

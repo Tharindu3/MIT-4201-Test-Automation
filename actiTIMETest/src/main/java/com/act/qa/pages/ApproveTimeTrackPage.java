@@ -14,9 +14,6 @@ public class ApproveTimeTrackPage extends TestBase {
 	
 	@FindBy(xpath = "//input[@class='filterFieldInput inputFieldWithPlaceholder' and @placeholder='Start typing name']")	
 	WebElement empSearchField;
-
-//	@FindBy(xpath= "//div[@class='userNameInfo' and contains(text(),',')]//span[contains(text(),'Alvarez')]")
-//	WebElement searchedEmpLabel;
 	
 	@FindBy(xpath = "//tbody[@class='data']//tr[@class='groupingRow']//td[@class='selectionCell']//input")	
 	WebElement empWorkingTimeGroupRecordChkBox;
@@ -53,7 +50,6 @@ public class ApproveTimeTrackPage extends TestBase {
 		
 		public boolean findsearchEmp(String Fname) {			
 			String searchedEmpLabel = "//div[@class='userNameInfo' and contains(text(),',')]//span[contains(text(),'"+Fname+"')]";
-			//System.out.println("Searched Emp Label: " + searchedEmpLabel);
 			return driver.findElement(By.xpath(searchedEmpLabel)).isDisplayed();			
 		}
 		

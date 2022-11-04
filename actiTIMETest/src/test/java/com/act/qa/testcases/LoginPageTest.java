@@ -23,14 +23,12 @@ public class LoginPageTest extends TestBase{
 	
 	@BeforeMethod
 	public void Setup() {
-//		log.info("****************************** Starting test cases execution  *****************************************");
 		initialization();		
 		loginPage = new LoginPage();
 	}
 	
 	@Test(priority = 1)
-	public void loginPageLogoTest() {
-//		log.info("****************************** Starting loginPageLogoTest test cases execution  *****************************************");
+	public void loginPageLogoTest() {	
 		boolean flag= loginPage.validateActiTimeLogo();
 		Assert.assertTrue(flag);		
 	}

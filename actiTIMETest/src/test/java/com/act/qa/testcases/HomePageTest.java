@@ -45,10 +45,7 @@ public class HomePageTest extends TestBase{
 	}
 	
 	@Test(priority = 2)
-	public void validateHomePageTitleTest() {
-		
-//		driver.get("https://demo.actitime.com/user/submit_tt.do");
-//		System.out.println("Page title is : " + driver.getTitle());
+	public void validateHomePageTitleTest() {	
 		 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICIT_WAIT));
 		String homePageTitle = homePage.validateHomePageTitle();		
@@ -84,11 +81,7 @@ public class HomePageTest extends TestBase{
 	
 	@Test(priority = 7, dataProvider = "getActiTimeTestData")
 	public void validateEnterTimeTracksForMeTest(String time_01,String time_02,String time_03) {
-//		homePage.enterTimeTrack("5:00","5:15","5:30");
-		if(homePage.verifySelectedEmpMe()) {
-//			homePage = homePage.enterTimeTrack("7:00","7:15","7:30");
-//			System.out.println("Times: " + time_01 + "," + time_02 + "," + time_03);
-			
+		if(homePage.verifySelectedEmpMe()) {		
 			homePage = homePage.enterTimeTrack(time_01,time_02,time_03);
 		}
 		Assert.assertTrue(homePage.verifySuccessTimeInsertion());
