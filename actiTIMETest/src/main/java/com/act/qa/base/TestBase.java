@@ -26,8 +26,11 @@ public class TestBase {
 	public TestBase() {
 		
 		try {
+			String path = System.getProperty("user.dir");
+			
 			prop = new Properties(); 
-			FileInputStream ip = new FileInputStream("C:\\Users\\Tharindu\\eclipse-workspace\\actiTIMETest\\src\\main\\java\\com\\act\\qa\\config\\config.properties");
+			//FileInputStream ip = new FileInputStream("C:\\Users\\Tharindu\\eclipse-workspace\\actiTIMETest\\src\\main\\java\\com\\act\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream(path + "\\src\\main\\java\\com\\act\\qa\\config\\config.properties");
 			prop.load(ip);
 			
 		}catch(FileNotFoundException e) {
@@ -41,11 +44,17 @@ public class TestBase {
 	public static void initialization() {
 		String browserName = prop.getProperty("browser");
 		
+		String path = System.getProperty("user.dir");						
+		
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Tharindu\\eclipse-workspace\\actiTIMETest\\driver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",path+"\\driver\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Tharindu\\eclipse-workspace\\actiTIMETest\\driver\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", "\\driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}else if(browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Tharindu\\eclipse-workspace\\actiTIMETest\\driver\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver",path+"\\driver\\geckodriver.exe");
+			//System.setProperty("webdriver.gecko.driver", "C:\\Users\\Tharindu\\eclipse-workspace\\actiTIMETest\\driver\\geckodriver.exe");
+			//System.setProperty("webdriver.gecko.driver", "\\driver\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		
