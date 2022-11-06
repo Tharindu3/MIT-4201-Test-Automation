@@ -27,7 +27,9 @@ public class TestUtil extends TestBase {
 	static Sheet sheet;	
 	
 	public static Object[][] getTestData(String fileName, String sheetName) {
-		String TESTDATA_SHEET_PATH = "C:\\Users\\Tharindu\\eclipse-workspace\\actiTIMETest\\src\\main\\java\\com\\act\\qa\\testdata\\" + fileName +".xlsx";
+		String path = System.getProperty("user.dir");
+		String TESTDATA_SHEET_PATH = path + "\\src\\main\\java\\com\\act\\qa\\testdata\\" + fileName +".xlsx";
+		
 		FileInputStream file = null;
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);
